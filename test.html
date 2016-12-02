@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sidebar-container">
+        <div class="brand-container">
+            <div class="brand-container-logo-container">
+                <div class="brand-container-logo"><a href="#"><img src="img/logo.png" srcset="img/logo@2x.png, img/logo@3x.png"></a></div><span class="textTransform-uppercase">Брендбук</span>
+            </div>
+        </div>
+        <div class="footer"><span>&copy; ООО «Название компании»</span></div>
+        <div class="navigation-container">
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 1</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="nav-item-secondary-container">
+                    <div class="nav-item-secondary"><a href="/club/logotype.html" class="link link--light lineHeight-m">Логотип</a></div>
+                    <div class="nav-item-secondary"><a href="/club/colors.html" class="link link--light lineHeight-m">Цвета</a></div>
+                    <div class="nav-item-secondary"><a href="/club/typography.html" class="link link--light lineHeight-m">Типографика</a></div>
+                    <div class="nav-item-secondary"><a href="/club/docs.html" class="link link--light lineHeight-m">Деловая документация</a></div>
+                    <div class="nav-item-secondary"><a href="/club/email-template.html" class="link link--light lineHeight-m">E-mail шаблон</a></div>
+                    <div class="nav-item-secondary"><a href="/club/advert.html" class="link link--light lineHeight-m">Рекламные материалы</a></div>
+                </div>
+            </div>
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 2</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="nav-item-secondary-container">
+                    <div class="nav-item-secondary"><a href="/club/logotype.html" class="link link--light lineHeight-m">Логотип</a></div>
+                    <div class="nav-item-secondary"><a href="/club/colors.html" class="link link--light lineHeight-m">Цвета</a></div>
+                    <div class="nav-item-secondary"><a href="/club/typography.html" class="link link--light lineHeight-m">Типографика</a></div>
+                    <div class="nav-item-secondary"><a href="/club/docs.html" class="link link--light lineHeight-m">Деловая документация</a></div>
+                    <div class="nav-item-secondary"><a href="/club/email-template.html" class="link link--light lineHeight-m">E-mail шаблон</a></div>
+                    <div class="nav-item-secondary"><a href="/club/advert.html" class="link link--light lineHeight-m">Рекламные материалы</a></div>
+                </div>
+            </div>
+
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 3</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+
+                <div class="nav-item-secondary-container">
+                    <div class="nav-item-secondary"><a href="/club/logotype.html" class="link link--light lineHeight-m">Логотип</a></div>
+                    <div class="nav-item-secondary"><a href="/club/colors.html" class="link link--light lineHeight-m">Цвета</a></div>
+                    <div class="nav-item-secondary"><a href="/club/typography.html" class="link link--light lineHeight-m">Типографика</a></div>
+                    <div class="nav-item-secondary"><a href="/club/docs.html" class="link link--light lineHeight-m">Деловая документация</a></div>
+                    <div class="nav-item-secondary"><a href="/club/email-template.html" class="link link--light lineHeight-m">E-mail шаблон</a></div>
+                    <div class="nav-item-secondary"><a href="/club/advert.html" class="link link--light lineHeight-m">Рекламные материалы</a></div>
+                </div>
+            </div>
+
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 3</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 4</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 5</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 6</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item-container">
+                <div class="nav-item"><span class="fontSize-l">Проект 7</span>
+                    <div class="nav-icon-container">
+                        <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<script>
+    (function($) {
+        $('.navigation-container .nav-item-container .nav-item').addClass('active').slideDown();
+        $('.navigation-container .nav-item .nav-icon').html('<i class="fa fa-caret-down" aria-hidden="true"></i>');
+
+        $('.navigation-container .nav-item').click(function(j) {
+            var dropDown = $(this).parent('div.nav-item-container').find('div.nav-item-secondary-container');
+
+            $(this).closest('div.navigation-container').find('div.nav-item-secondary-container').not(dropDown).slideUp();
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+
+
+            } else {
+                $(this).parent('div.nav-item-container').find('div.nav-item').removeClass('active');
+                $(this).addClass('active');
+            }
+
+
+            dropDown.stop(false, true).slideToggle();
+
+            j.preventDefault();
+        });
+
+
+
+    })(jQuery);
+</script>
+
+<script>
+    $(function() {
+        var Accordion = function(el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.nav-item');
+            // Evento
+            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+        }
+
+        Accordion.prototype.dropdown = function(e) {
+            var $el = e.data.el;
+            $this = $(this),
+                    $next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.nav-item-secondary-container').not($next).slideUp().parent().removeClass('open');
+            }
+        };
+
+        var accordion = new Accordion($('.navigation-container'), false);
+    });
+</script>
+
+
+<style>
+    .nav-item-secondary-container {
+        display: none;
+    }
+
+    .navigation-container .nav-item-container.open i.fa-caret-down {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+</style>
+</body>
+</html>
