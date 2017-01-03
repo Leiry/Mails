@@ -104,10 +104,11 @@
 </aside>
 <script>
     (function($) {
-        $('.navigation-container .nav-item-container .nav-item').addClass('active').slideDown();
         $('.navigation-container .nav-item .nav-icon').html('<i class="fa fa-caret-down" aria-hidden="true"></i>');
 
         $('.navigation-container .nav-item').click(function(j) {
+            $('.navigation-container .nav-item-container .nav-item').addClass('active').slideDown();
+
             var dropDown = $(this).parent('div.nav-item-container').find('div.nav-item-secondary-container');
 
             $(this).closest('div.navigation-container').find('div.nav-item-secondary-container').not(dropDown).slideUp();
