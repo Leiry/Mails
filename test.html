@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Styleguide</title>
+    <meta name="description" content="Централизованное место хранения UI компонентов, руководящих принципов бренда, руководств дизайна и кода">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/aec116ab0c.js"></script>
+    <style>.sidebar{height:100%;position:fixed;top:0;left:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:#fff;border-right:1px solid #E0E6ED;-webkit-overflow-scrolling:touch;z-index:400;-webkit-transform:translateX(-100%);transform:translateX(-100%)}@media screen and (min-width: 768px){.sidebar{width:30%;-webkit-transform:translateX(0);transform:translateX(0)}}@media screen and (min-width: 1180px){.sidebar{width:20%}}.sidebar-container{overflow:auto;height:100%}.brand-container{padding-top:20px;padding-bottom:20px;border-bottom:1px solid #E0E6ED;text-align:center}.brand-container-logo-container{padding-top:20px;padding-bottom:20px}.brand-container-logo-container span{letter-spacing:3px;font-size:10px;color:#8492A6}.brand-container-logo{margin-bottom:15px}.brand-container-logo a{cursor:pointer}.brand-container-logo a img{width:80px;height:auto}.footer{padding:20px;position:absolute;bottom:0;left:0;z-index:2;width:100%;box-sizing:border-box;background-color:#fff}.footer span{font-size:10px;padding:5px;line-height:1;color:#8492A6}.navigation-container{position:relative;background-color:#fff;box-sizing:border-box;margin-bottom:56px}.nav-item-container{border-bottom:1px solid #E0E6ED;cursor:pointer;padding:15px}.nav-item{padding:10px 40px 10px 10px;position:relative}.nav-item .nav-icon-container{position:absolute;padding-right:15px;top:0;right:0;height:100%;pointer-events:none}.nav-item .nav-icon-container .nav-icon{display:table;height:100%;color:#D3DCE6}.nav-item .nav-icon-container .nav-icon i{display:table-cell;vertical-align:middle}.nav-item-secondary-container{padding:20px 40px;border-bottom:1px solid #E0E6ED;background-color:#F9FAFC}.nav-item-secondary-container .nav-item-secondary a{display:block;padding:10px 20px}</style>
 </head>
 <body>
+
 <aside class="sidebar">
     <div class="sidebar-container">
         <div class="brand-container">
@@ -15,7 +22,7 @@
         <div class="footer"><span>&copy; ООО «Название компании»</span></div>
         <div class="navigation-container">
             <div class="nav-item-container">
-                <div class="nav-item"><span class="fontSize-l">Проект 1</span>
+                <div class="nav-item accordion-menu"><span class="fontSize-l">Проект 1</span>
                     <div class="nav-icon-container">
                         <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
                     </div>
@@ -31,7 +38,7 @@
                 </div>
             </div>
             <div class="nav-item-container">
-                <div class="nav-item"><span class="fontSize-l">Проект 2</span>
+                <div class="nav-item accordion-menu"><span class="fontSize-l">Проект 2</span>
                     <div class="nav-icon-container">
                         <div class="nav-icon"><i class="fa fa-caret-down"></i></div>
                     </div>
@@ -102,12 +109,31 @@
         </div>
     </div>
 </aside>
+
+</body>
+</html>
 <script>
+
+    var acc = document.getElementsByClassName("accordion-menu");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+
+
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+        }
+    }
+
+
+</script>
+<!--<script>
     (function($) {
         $('.navigation-container .nav-item .nav-icon').html('<i class="fa fa-caret-down" aria-hidden="true"></i>');
+        $('.navigation-container .nav-item-container .nav-item').addClass('active').slideDown();
 
         $('.navigation-container .nav-item').click(function(j) {
-            $('.navigation-container .nav-item-container .nav-item').addClass('active').slideDown();
 
             var dropDown = $(this).parent('div.nav-item-container').find('div.nav-item-secondary-container');
 
@@ -131,9 +157,9 @@
 
 
     })(jQuery);
-</script>
+</script>-->
 
-<script>
+<!--<script>
     $(function() {
         var Accordion = function(el, multiple) {
             this.el = el || {};
@@ -160,15 +186,23 @@
 
         var accordion = new Accordion($('.navigation-container'), false);
     });
-</script>
+</script>-->
 
 
 <style>
     .nav-item-secondary-container {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        opacity: 0;
     }
 
-    .navigation-container .nav-item-container.open i.fa-caret-down {
+    .nav-item-secondary-container.show {
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .nav-item.accordion-menu.active i.fa-caret-down {
         -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
         -o-transform: rotate(180deg);
