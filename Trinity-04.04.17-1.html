@@ -20,6 +20,12 @@
             max-width: 600px;
         }
 
+        a {
+            color: #333 !important;
+            font-size: 14px !important;
+            text-decoration: none;
+        }
+
         @media only screen and (max-width: 600px), screen and (max-device-width: 600px) {
             .inner-wrapper {
                 width: 100% !important;
@@ -72,10 +78,24 @@
     </v:background>
     <![endif]-->
     <div style="margin: 10px auto 0;max-width: 600px;font-family: sans-serif;">
+        <table style="padding: 0%;margin: 0 auto;width: 100%;text-align: center;">
+            <tbody>
+            <tr>
+                <td style="vertical-align: middle;text-align: left"><p
+                        style="padding: 5px 10px;color: #333; border-radius: 5px;background-color: #e0e0e1;;text-align: center;width: 182px;display: inline-block;vertical-align: middle;cursor: pointer">
+                    {$unsubscribe}</p>
+                </td>
+                <td style="vertical-align: middle;text-align: right;"><p
+                        style="padding: 5px 10px; border-radius: 5px;color: #333;background-color: #e0e0e1;text-align: center;width: 182px;display: inline-block;vertical-align: middle;font-size: 14px;cursor: pointer">
+                    {$spamAbuse}</p></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
     <table height="100%" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
         <tr>
+
             <td valign="top" align="center" background="" style="background-repeat: repeat;">
                 <div class="webkit">
                     <br/>
